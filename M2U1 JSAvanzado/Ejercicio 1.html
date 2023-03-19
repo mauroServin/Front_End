@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 1</title>
+
+        <style>
+        .square {
+			width: 100px;
+			height: 100px;
+			margin: 20px;
+			float: left;
+			cursor: pointer;
+		}
+
+		#square1 {
+			background-color: red;
+		}
+
+		#square2 {
+			background-color: blue;
+		}
+
+		#square3 {
+			background-color: green;
+		}
+        </style>
+    </head>
+
+    <body>
+        <div id="square1" class="square"></div>
+        <div id="square2" class="square"></div>
+        <div id="square3" class="square"></div>
+        
+        <script>
+            document.getElementById("square1").addEventListener("click", function() {
+			document.body.style.backgroundColor = "red";
+		});
+
+		document.getElementById("square2").addEventListener("click", function() {
+			document.body.style.backgroundColor = "blue";
+		});
+
+		document.getElementById("square3").addEventListener("click", function() {
+			document.body.style.backgroundColor = "green";
+		});
+        </script>
+    </body>
+</html>

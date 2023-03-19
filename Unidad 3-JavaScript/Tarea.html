@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        const distancia = prompt('Ingrese la distancia a recorrer:');
+
+        var transporte= 'pie';
+
+        if(distancia >= 0 && distancia <= 1000){
+            document.write('Su medio de transporte adecuado es: ' + transporte);
+        }else if(distancia > 1000 && distancia <= 10000){
+            transporte = 'bicicleta';
+            document.write('Su medio de transporte adecuado es: ' + transporte);
+        }else if(distancia > 10000 && distancia <= 30000){
+            transporte = 'colectivo';
+            document.write('Su medio de transprote adecuado es: ' + transporte);
+        }else if(distancia > 30000 && distancia <= 100000){
+            transporte = 'auto';
+            document.write('Su medio de tansporte adecuado es: ' + transporte);
+        }else if(distancia > 10000){
+            transporte = 'avión';
+            document.write('Su medio de transporte adecuado es: '+ transporte);
+        }else{
+            document.write('La distancia ingresada es inválida');
+        }
+
+
+        var numeros= [2,4,1,5,3,6];
+        var mayor = 0;
+
+        for(let i = 0; i < numeros.length; i++){
+            if(mayor < numeros[i]){
+                mayor = numeros[i];
+            }
+        }
+        
+        document.write('<br>El número mayor es: ' + mayor);
+    </script>
+</body>
+</html>
