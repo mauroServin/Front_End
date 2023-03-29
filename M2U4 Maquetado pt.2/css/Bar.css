@@ -34,10 +34,3 @@ h1, h2 {
     width: 100%;
     aspect-ratio: 1.2;
 }
-
-.texto{
-    background-color: white;
-    position: relative;
-    top: 160px;
-    right: 15px;
-}
