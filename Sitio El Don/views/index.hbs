@@ -1,0 +1,184 @@
+<div class="container-fluid">
+    <div id="home" class="row align-items-center hero scroll_section">
+        <div class="col-lg-3 offset-lg-2">
+            <h1 class="colorTitulo">Bienvenido a El Don panadería!</h1>
+            <p>¡Bienvenidos a nuestra panadería, donde el aroma irresistible del pan recién horneado te dará la bienvenida! Somos una panadería artesanal comprometida con la excelencia y la tradición en cada bocado. Nuestro equipo de panaderos apasionados se esfuerza por crear productos de la más alta calidad, utilizando solo ingredientes frescos y naturales.</p>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div id="novedades" class="col-md-5 offset-md-2 scroll_section">
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
+                            src="images/header2.jpg">{{titulo}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+{{#each novedades}}
+    <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>{{subtitulo}}</h4>
+                    <p>{{cuerpo}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+    <div class="row my-3">
+        <div class="rounded py-5 testimonios">
+            <h2 class="text-center">Testimonios</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonio">
+                            <h5>"Infaltable en los domingos!</h5>
+                            <p>Andrés, Quilmes </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>las mejores masas finas, y la atención un 10!</h5>
+                            <p>Devora, Quilmes Oeste</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>Las chipás son las mejores!</h5>
+                            <p>Tiziano, Bernal</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div><!--cierra div de testimonios-->
+</div><!--cierra el div de novedades-->
+
+<div id="historia" class="row align-items-center py-4 scroll_section">
+    <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+        <img src="images/header3.jpg" alt="historia 1" class="img-fluid">
+    </div>
+    <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+        <img src="images/header3.jpg" alt="historia 2" class="img-fluid">
+    </div>
+    <div class="col-12 d-sm-none">
+        <img src="images/header3.jpg" alt="historia 3" class="img-fluid">
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+        <h2>Historia</h2>
+        <p>Hace más de tres décadas, en el corazón de nuestro pintoresco pueblo, nació nuestra panadería con un sueño en mente: compartir el amor por el pan y la repostería con nuestra comunidad. Lo que comenzó como una pequeña tienda familiar se ha convertido en un lugar querido por todos, donde la tradición y la pasión se fusionan. Nuestro fundador, Don Juan, era un panadero de tercera generación. Con sus manos hábiles y su conocimiento ancestral, creó los panes más deliciosos que se hayan probado en la región. La comunidad pronto se enteró de su talento y comenzó a acudir a su modesta panadería en busca de ese sabor inigualable y la calidez de su servicio. Con el tiempo, la fama de nuestra panadería se extendió más allá de las fronteras del pueblo. Las personas viajaban desde ciudades vecinas para disfrutar de nuestros panes y pasteles únicos. Fue entonces cuando decidimos expandir nuestras instalaciones y contratar a un equipo de panaderos y pasteleros apasionados, pero siempre manteniendo la esencia de la panadería familiar que nos vio nacer.</p>
+    </div>
+</div><!--cierra div de historia-->
+
+<div id="nosotros" class="row aling-items-stretch my-3 staff py-4 scroll_section">
+    <div class="col-lg-8 offset-lg-2">
+        <h2>Nosotros</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="images/dueñoPanaderia.jpg" class="card-img-top" alt="Elias Chiarlini">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan López</h5>
+                        <p>¡Nuestro fundador!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/maestroPanadero.jpg" class="card-img-top" alt="Elias Chiarlini">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Domínguez</h5>
+                        <p>¡Nuestro Maestro Panadero! Lleva 10 años con nosotros, con el tiempo se volvió un íntimo amigo de Juan</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card">
+                    <img src="images/panadero.jpg" class="card-img-top" alt="Elias Chiarlini">
+                    <div class="card-body">
+                        <h5 class="card-title">Analía Sánchez</h5>
+                        <p>¡Nuestra Panadera! Junto a Juan es la encargada de realizar las recetas familiares que caracterizan a nuestra panadería.</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card">
+                    <img src="images/vendedorPanadero.jpg" class="card-img-top" alt="Elias Chiarlini">
+                    <div class="card-body">
+                        <h5 class="card-title">Jimena Chiarlini</h5>
+                        <p>¡Nuestra Vendedora! La encargada de atender todos los pedidos de los clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--cierra div de nosotros-->
+</div><!--cierra div de container fluid-->
+
+<div id="conocenos" class="row py-4 scroll_section">
+    <div class="col-md-4 offset-md-2">
+        <h2>Visitanos</h2>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.296016290003!2d-58.259700087868474!3d-34.7229321636923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e402d0301a9%3A0x6b74f359773716e!2sAlem%20190%2C%20Quilmes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1687298751946!5m2!1ses!2sar"></iframe>
+        </div>
+    </div><!--cierra div de visitanos-->
+
+
+    <div class="col-md-4 mt-4 mt-sm-0">
+        <h2>Contactanos</h2>
+        <form class="row g-3" action="/" method="post">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+            </div>
+            <div class="col-12">
+                <label for="tel" class="form-label">Tel</label>
+                <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+        <p>{{message}}</p>
+    </div><!--cierra div de contactanos-->
+</div><!--cierra div de conocenos-->
